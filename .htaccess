@@ -1,0 +1,72 @@
+# Activare motor de rescriere
+RewriteEngine On
+
+########################################
+# 🔁 Redirect www → non-www
+########################################
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+########################################
+# 🔒 Forțare HTTPS
+########################################
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+########################################
+# ✅ EXCLUDERE fișier Google Search Console
+########################################
+RewriteCond %{REQUEST_URI} ^/google[a-z0-9]+\.html$ [NC]
+RewriteRule ^ - [L]
+
+########################################
+# 🏠 Redirect root către landing page
+########################################
+RewriteCond %{REQUEST_URI} ^/?$ [OR]
+RewriteCond %{REQUEST_URI} ^/index\.html$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/$ 
+
+########################
+### MODIFFY ###
+#######################
+RewriteRule ^.*$ https://domeniul-tau.ro/nume-proiect-seo/ [R=301,L]
+
+########################################
+# ⚡ GZIP Compression
+########################################
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+########################################
+# 🚀 Browser Caching
+########################################
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresDefault "access plus 1 week"
+</IfModule>
+
+########################################
+# 🛡️ Securitate de bază
+########################################
+
+# 🔧 Ascunde index.html din orice subfolder
+RewriteCond %{THE_REQUEST} /(.*/)?index\.html [NC]
+RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
+
+# Nu permite listarea fișierelor
+Options -Indexes
+
+# Blochează accesul la fișierul .htaccess
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
