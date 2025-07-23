@@ -1,16 +1,53 @@
 /* INTERNAL BUTTONS */
-/*
-document.querySelector(".btn-name").addEventListener("click", (e) => {
+
+document.querySelector(".btn-diagnosis").addEventListener("click", (e) => {
   e.preventDefault();
-  document.querySelector("#section-name").scrollIntoView({ behavior: "smooth" });
+  window.location.href = "./servicii/diagnoza/index.html";
 });
-*/
-document.querySelectorAll(".btn-navbar").forEach((btn) => {
+
+document.querySelector(".btn-mechanics").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "./servicii/mecanica/index.html";
+});
+
+document.querySelector(".btn-electrical").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "./servicii/electrica/index.html";
+});
+
+document.querySelector(".btn-diagnosis").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "./servicii/diagnoza/index.html";
+});
+
+document.querySelector(".btn-hero").addEventListener("click", () => {
+  const sectionServices = document.querySelector("#section-services");
+  sectionServices.scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".btn-hero-white").addEventListener("click", () => {
+  const sectionContact = document.querySelector("#section-contact");
+  sectionContact.scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".btn-navbar").addEventListener("click", () => {
+  const sectionContact = document.querySelector("#section-contact");
+  sectionContact.scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".btn-services").addEventListener("click", () => {
+  const sectionServices = document.querySelector("#section-services");
+  sectionServices.scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelectorAll(".btn-schedule").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector("#section-contact").scrollIntoView({ behavior: "smooth" });
   });
 });
+
+/*
 
 document.querySelectorAll(".btn-hero").forEach((btn) => {
   btn.addEventListener("click", (e) => {

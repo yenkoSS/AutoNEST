@@ -82,31 +82,60 @@
   </head>
   <body>
     <header id="home">
+      <div class="social-box-nav">
+        <div class="d-flex align-items-center" style="gap: 2rem">
+          <img src="icons/telefon service auto autonest.svg" alt="telefon service auto autonest" class="icon-social-nav" />
+          <p class="text-social-nav">0749 406 638</p>
+        </div>
+        <div class="d-flex align-items-center" style="gap: 2rem">
+          <img src="icons/adresa service auto autonest.svg" alt="adresa service auto autonest" class="icon-social-nav" />
+          <p class="text-social-nav">Piața Libertății nr. 9, Brasov</p>
+        </div>
+      </div>
       <nav class="nav-header d-flex justify-content-between align-items-center">
         <a href="#home" class="logo-navbar"><img src="icons/AutoNest Logo.svg" alt="logo autonest service auto" class="icon-logo-header" /></a>
         <ul class="nav-header-list-lg">
           <li>
-            <a href="servicii/diagnoza/index.html" class="nav-header-link-lg">Diagnoză</a>
+            <a href="#section-about" class="nav-header-link-lg">Despre</a>
+          </li>
+
+          <li>
+            <a href="#section-services" class="nav-header-link-lg">Servicii</a>
           </li>
           <li>
-            <a href="servicii/mecanica/index.html" class="nav-header-link-lg">Mecanică</a>
+            <a href="#section-reviews" class="nav-header-link-lg">Testimoniale</a>
           </li>
           <li>
-            <a href="servicii/electrica/index.html" class="nav-header-link-lg">Electrică</a>
+            <a href="#section-faq" class="nav-header-link-lg">Întrebări</a>
           </li>
         </ul>
         <button class="btn-navbar">Contact</button>
-        <div class="social-box-nav">
-          <div class="d-flex align-items-center" style="gap: 2rem">
-            <img src="icons/telefon service auto autonest.svg" alt="telefon service auto autonest" class="icon-social-nav" />
-            <p class="text-social-nav">0749 406 638</p>
-          </div>
-          <div class="d-flex align-items-center" style="gap: 2rem">
-            <img src="icons/adresa service auto autonest.svg" alt="adresa service auto autonest" class="icon-social-nav" />
-            <p class="text-social-nav">Piața Libertății nr. 9, Brasov</p>
-          </div>
-        </div>
+        <img src="icons/meniu.svg" alt="meniu service auto" class="icon-menu" />
+        <ul class="nav-header-list-sm">
+          <li>
+            <a href="#home" class="nav-header-link-sm">Acasă</a>
+          </li>
+          <li>
+            <a href="#section-about" class="nav-header-link-sm">Despre</a>
+          </li>
+          <li>
+            <a href="#section-services" class="nav-header-link-sm">Servicii</a>
+          </li>
+          <li>
+            <a href="#section-reviews" class="nav-header-link-sm">Testimoniale</a>
+          </li>
+          <li>
+            <a href="#section-faq" class="nav-header-link-sm">Întrebări</a>
+          </li>
+          <li>
+            <a href="#section-contact" class="nav-header-link-sm">Contact</a>
+          </li>
+          <img src="icons/close.svg" alt="icon close menu" class="icon-close" />
+        </ul>
       </nav>
+
+      <!--
+      
       <nav class="nav-fixed d-flex justify-content-between align-items-center">
         <a href="#home" class="logo-navbar"><img src="icons/AutoNest Logo.svg" alt="logo autonest service auto" class="icon-logo-header" /></a>
         <ul class="nav-header-list-lg">
@@ -125,16 +154,17 @@
         </ul>
         <button class="btn-navbar">Contact</button>
         <div class="social-box-nav">
-          <div class="d-flex align-items-center" style="gap: 2rem">
+          <div class="d-flex align-items-center" style="gap: 7px">
             <img src="icons/telefon service auto autonest.svg" alt="telefon service auto autonest" class="icon-social-nav" />
             <p class="text-social-nav">0749 406 638</p>
           </div>
-          <div class="d-flex align-items-center" style="gap: 2rem">
+          <div class="d-flex align-items-center" style="gap: 7px">
             <img src="icons/adresa service auto autonest.svg" alt="adresa service auto autonest" class="icon-social-nav" />
             <p class="text-social-nav">Piața Libertății nr. 9, Brasov</p>
           </div>
         </div>
       </nav>
+      -->
       <div class="container c-header">
         <div class="row d-flex align-items-center" style="height: 100%">
           <div class="col-lg-10">
@@ -167,25 +197,25 @@
     <section class="section-whyus">
       <div class="container d-flex justify-content-center">
         <div class="box-why-us d-flex flex-column align-items-center offset-y1pos offsetY">
-          <div class="row">
+          <div class="row g-5">
             <div class="col-lg-4">
               <div class="card-whyus after-separator">
                 <img src="icons/garantie service auto.svg" alt="garantie service auto" class="icon-card-whyus mbot-10" />
-                <p class="text-title-whyus mbot-20">Garanție</p>
+                <p class="text-title-whyus mbot-10">Garanție</p>
                 <p class="text-white">Oferim garanție pentru toate serviciile și produsele noastre.</p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card-whyus after-separator">
                 <img src="icons/experienta service auto.svg" alt="experienta service auto" class="icon-card-whyus mbot-10" />
-                <p class="text-title-whyus mbot-20">Experiență</p>
+                <p class="text-title-whyus mbot-10">Experiență</p>
                 <p class="text-white">Cu peste 10 ani în domeniu, știm exact ce avem de făcut.</p>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="card-whyus">
                 <img src="icons/profesionalism service auto.svg" alt="experienta service auto" class="icon-card-whyus mbot-10" />
-                <p class="text-title-whyus mbot-20">Profesionalism</p>
+                <p class="text-title-whyus mbot-10">Profesionalism</p>
                 <p class="text-white">Lucrăm corect, atent și respectăm fiecare angajament</p>
               </div>
             </div>
@@ -201,12 +231,12 @@
     <section id="section-about" class="section-aboutus">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
-            <img src="img/despre autonest.jpg" alt="despre autonest service auto" class="img-fluid" />
+          <div class="col-lg-3 d-none d-lg-block">
+            <img src="img/despre autonest.jpg" alt="despre autonest service auto" class="img-fluid offset-x1neg offsetX" />
           </div>
           <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-            <h4>Povestea noastră</h4>
-            <h3 class="mbot-60">Despre noi</h3>
+            <h4 class="offset-x1neg offsetX">Povestea noastră</h4>
+            <h3 class="mbot-60 offset-x1pos offsetX">Despre noi</h3>
             <div style="width: 90%">
               <p class="mbot-10">
                 La <strong>AutoNEST</strong>, pasiunea pentru mașini se îmbină cu profesionalismul și experiența. Suntem un service auto dedicat întreținerii și reparației autovehiculelor, punând
@@ -226,7 +256,7 @@
           </div>
           <div class="col-lg-3 d-flex align-items-center">
             <div class="box-experience">
-              <p class="text-experience">20+ <span>ani de experiență</span></p>
+              <p class="text-experience offset-x1pos offsetX">20+ <span>ani de experiență</span></p>
             </div>
           </div>
         </div>
@@ -235,46 +265,46 @@
     <section id="section-services" class="section-services">
       <div class="background-red-absolute"></div>
       <div class="container d-flex flex-column align-items-center">
-        <h4 class="text-black" style="width: 100%; text-align: start">Cum te putem ajuta</h4>
-        <h3 class="mbot-60 text-white" style="width: 100%; text-align: start">Serviciile noastre</h3>
+        <h4 class="text-black offset-x1neg offsetX" style="width: 100%; text-align: start">Cum te putem ajuta</h4>
+        <h3 class="mbot-60 text-white offset-x1pos offsetX" style="width: 100%; text-align: start">Serviciile noastre</h3>
         <p class="mbot-40">
           La service-ul nostru, punem accent pe calitate, transparență și promptitudine. Oferim o gamă completă de servicii auto, de la diagnoză computerizată și revizii tehnice, până la reparații
           complexe și întreținere periodică. Indiferent de marcă sau model, ne asigurăm că mașina ta este în cele mai bune mâini.
         </p>
 
-        <div class="row mbot-70">
-          <div class="col-lg-3">
-            <div class="card-services d-flex flex-column justify-content-between align-items-center">
+        <div class="row mbot-70 g-5">
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div class="card-services d-flex flex-column justify-content-between align-items-center offset-y1pos offsetY">
               <div class="d-flex flex-column align-items-center justify-content-center mbot-30">
                 <img src="icons/servicii diagnoza service auto.svg" alt="servicii diagnoza service auto" class="icon-services mbot-10" />
                 <h2 class="mbot-20">Diagnoză</h2>
                 <p class="mbot-20">Reparații precise și întreținere completă pentru motor, transmisie, frâne și alte componente esențiale.</p>
               </div>
-              <button class="btn-more">Mai mult</button>
+              <button class="btn-more btn-diagnosis">Mai mult</button>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="card-services d-flex flex-column justify-content-between align-items-center">
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div class="card-services d-flex flex-column justify-content-between align-items-center offset-y2pos offsetY">
               <div class="d-flex flex-column align-items-center justify-content-center mbot-30">
                 <img src="icons/servicii mecanica service auto.svg" alt="servicii mecanica service auto" class="icon-services mbot-10" />
                 <h2 class="mbot-20">Mecanică</h2>
                 <p class="mbot-20">Reparații precise și întreținere completă pentru motor, transmisie, frâne și alte componente esențiale.</p>
               </div>
-              <button class="btn-more">Mai mult</button>
+              <button class="btn-more btn-mechanics">Mai mult</button>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="card-services d-flex flex-column justify-content-between align-items-center">
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div class="card-services d-flex flex-column justify-content-between align-items-center offset-y2pos offsetY">
               <div class="d-flex flex-column align-items-center justify-content-center mbot-30">
                 <img src="icons/servicii electrica service auto.svg" alt="servicii electrica service auto" class="icon-services mbot-10" />
                 <h2 class="mbot-20">Electrică</h2>
                 <p class="mbot-20">Reparații precise și întreținere completă pentru motor, transmisie, frâne și alte componente esențiale.</p>
               </div>
-              <button class="btn-more">Mai mult</button>
+              <button class="btn-more btn-electrical">Mai mult</button>
             </div>
           </div>
-          <div class="col-lg-3">
-            <div class="card-services d-flex flex-column justify-content-between align-items-center">
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div class="card-services d-flex flex-column justify-content-between align-items-center offset-y1pos offsetY">
               <div class="d-flex flex-column align-items-center justify-content-center mbot-30">
                 <img src="icons/servicii intretinere service auto.svg" alt="servicii intretinere service auto" class="icon-services mbot-10" />
                 <h2 class="mbot-20">Întreținere</h2>
@@ -284,18 +314,17 @@
             </div>
           </div>
         </div>
-        <button class="btn-all-services">Toate serviciile</button>
       </div>
     </section>
 
     <section class="section-schedule">
       <div class="box-schedule-dark">
-        <h3 class="text-white h3-small">Programează-te acum</h3>
+        <h3 class="text-white h3-small offset-x1pos offsetX">Programează-te acum</h3>
       </div>
       <div class="container">
-        <div class="row" style="margin-left: 25rem">
-          <div class="col-lg-4 d-flex justify-content-center">
-            <div class="card-schedule d-flex justify-content-between">
+        <div class="row row-offset g-5">
+          <div class="col-lg-4 d-flex justify-content-left">
+            <div class="card-schedule d-flex justify-content-between offset-y1pos offsetY">
               <img src="icons/contact telefon service auto.svg" alt="contact telefon service auto" class="icon-schedule" />
               <div class="d-flex flex-column">
                 <p class="text-schedule-title">Telefon</p>
@@ -303,8 +332,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 d-flex justify-content-center">
-            <div class="card-schedule d-flex justify-content-between">
+          <div class="col-lg-4 d-flex justify-content-left">
+            <div class="card-schedule d-flex justify-content-between offset-y1pos offsetY">
               <img src="icons/contact email service auto.svg" alt="contact email service auto" class="icon-schedule" />
               <div class="d-flex flex-column">
                 <p class="text-schedule-title">Email</p>
@@ -312,8 +341,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 d-flex justify-content-center">
-            <div class="card-schedule d-flex justify-content-between">
+          <div class="col-lg-4 d-flex justify-content-left">
+            <div class="card-schedule d-flex justify-content-between offset-y1pos offsetY">
               <img src="icons/contact adresa service auto.svg" alt="contact adresa service auto" class="icon-schedule" />
               <div class="d-flex flex-column">
                 <p class="text-schedule-title">Adresă</p>
@@ -326,12 +355,12 @@
     </section>
     <section id="section-reviews" class="section-testimonials">
       <div class="container">
-        <h4 style="width: 100%; text-align: center">Ce spun clienții</h4>
-        <h3 class="mbot-60" style="width: 100%; text-align: center">Testimoniale</h3>
+        <h4 class="offset-x1neg offsetX" style="width: 100%; text-align: center">Ce spun clienții</h4>
+        <h3 class="mbot-60 offset-x1pos offsetX" style="width: 100%; text-align: center">Testimoniale</h3>
         <p class="mbot-40">Ne mândrim cu încrederea pe care o construim zi de zi. Iată ce spun cei care ne-au trecut pragul:</p>
-        <div class="row">
+        <div class="row g-5">
           <div class="col-lg-6">
-            <div class="card-testimonial">
+            <div class="card-testimonial offset-x1pos offsetX">
               <p class="text-white mbot-10">
                 „Am ajuns la service fără programare, cu o problemă la frâne. M-au primit imediat și în mai puțin de două ore mașina era gata. Personal amabil, prețuri corecte și transparență totală.
                 Cu siguranță voi reveni!”
@@ -342,7 +371,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="card-testimonial">
+            <div class="card-testimonial offset-x1neg offsetX">
               <p class="text-white mbot-10">
                 „Am ajuns la service fără programare, cu o problemă la frâne. M-au primit imediat și în mai puțin de două ore mașina era gata. Personal amabil, prețuri corecte și transparență totală.
                 Cu siguranță voi reveni!”
@@ -357,11 +386,11 @@
     </section>
     <section id="section-faq" class="section-faq">
       <div class="container">
-        <h4 class="text-white" style="width: 100%; text-align: start">Cel mai des întâlnite curiozități ale clienților</h4>
-        <h3 class="mbot-60" style="width: 100%; text-align: start">Întrebări frecvente</h3>
+        <h4 class="text-white offset-x1neg offsetX" style="width: 100%; text-align: start">Cel mai des întâlnite curiozități ale clienților</h4>
+        <h3 class="mbot-60 offset-x1pos offsetX" style="width: 100%; text-align: start">Întrebări frecvente</h3>
         <div class="row d-flex justify-content-center">
           <div class="col-lg-10 flex-column d-flex align-items-center justify-content-center">
-            <div class="card-faq mbot-30">
+            <div class="card-faq mbot-30 offset-x1neg offsetX">
               <div class="card-top">
                 <p class="text-faq-question">Primesc mașină de schimb?</p>
                 <img src="icons/open faq.svg" alt="open faq icon" class="icon-faq-open" />
@@ -370,7 +399,7 @@
                 <p class="text-faq-answer">R: Inspectia tehnica dureaza aproximativ 30 de minute.</p>
               </div>
             </div>
-            <div class="card-faq mbot-30">
+            <div class="card-faq mbot-30 offset-x1pos offsetX">
               <div class="card-top">
                 <p class="text-faq-question">Cât durează o revizie completă?</p>
                 <img src="icons/open faq.svg" alt="open faq icon" class="icon-faq-open" />
@@ -381,7 +410,7 @@
                 </p>
               </div>
             </div>
-            <div class="card-faq mbot-30">
+            <div class="card-faq mbot-30 offset-x1neg offsetX">
               <div class="card-top">
                 <p class="text-faq-question">Am nevoie de programare sau pot veni direct?</p>
                 <img src="icons/open faq.svg" alt="open faq icon" class="icon-faq-open" />
@@ -392,7 +421,7 @@
                 </p>
               </div>
             </div>
-            <div class="card-faq mbot-30">
+            <div class="card-faq mbot-30 offset-x1pos offsetX">
               <div class="card-top">
                 <p class="text-faq-question">Ce tipuri de reparații efectuați?</p>
                 <img src="icons/open faq.svg" alt="open faq icon" class="icon-faq-open" />
@@ -401,7 +430,7 @@
                 <p class="text-faq-answer">R: Oferim o gamă completă de servicii: diagnoză computerizată, mecanică, electrică auto, schimb ulei, frâne, suspensii, climatizare, și altele.</p>
               </div>
             </div>
-            <div class="card-faq mbot-30">
+            <div class="card-faq mbot-30 offset-x1neg offsetX">
               <div class="card-top">
                 <p class="text-faq-question">Lucrați și cu piese aduse de client?</p>
                 <img src="icons/open faq.svg" alt="open faq icon" class="icon-faq-open" />
@@ -416,11 +445,11 @@
     </section>
     <section id="section-contact" class="section-contact">
       <div class="container">
-        <h4 style="width: 100%; text-align: start">Ai nevoie de noi?</h4>
-        <h3 class="mbot-60" style="width: 100%; text-align: start">Contact</h3>
+        <h4 class="offset-x1neg offsetX" style="width: 100%; text-align: start">Ai nevoie de noi?</h4>
+        <h3 class="mbot-60 offset-x1pos offsetX" style="width: 100%; text-align: start">Contact</h3>
         <div class="row">
           <div class="col-lg-5">
-            <form class="form-contact">
+            <form class="form-contact offset-y1pos offsetY">
               <p class="form-title mbot-30">Formular de contact</p>
               <p class="text-error"></p>
               <div class="box-form-contact mbot-20">
@@ -451,15 +480,15 @@
             <div class="row">
               <div class="col-lg-12 d-flex justify-content-center">
                 <div class="card-contact">
-                  <div class="d-flex align-items-center mbot-30" style="gap: 15px">
+                  <div class="d-flex align-items-center mbot-30 offset-x1neg offsetX" style="gap: 15px">
                     <img src="icons/contact telefon service auto.svg" alt="telefon contact service auto" class="icon-contact" />
                     <p class="text-contact">0749 406 638</p>
                   </div>
-                  <div class="d-flex align-items-center mbot-30" style="gap: 15px">
+                  <div class="d-flex align-items-center mbot-30 offset-x1pos offsetX" style="gap: 15px">
                     <img src="icons/contact email service auto.svg" alt="email contact service auto" class="icon-contact" />
                     <p class="text-contact">contact@websiteshop.ro</p>
                   </div>
-                  <div class="d-flex align-items-center mbot-30" style="gap: 15px">
+                  <div class="d-flex align-items-center mbot-30 offset-x1neg offsetX" style="gap: 15px">
                     <img src="icons/contact adresa service auto.svg" alt="adresa contact service auto" class="icon-contact" />
                     <p class="text-contact">Piata Libertătii nr. 9</p>
                   </div>
@@ -470,6 +499,7 @@
               <div class="col-lg-12">
                 <div style="width: 100%">
                   <iframe
+                    class="offset-y1pos offsetY"
                     frameborder="0"
                     scrolling="no"
                     marginheight="0"
@@ -484,6 +514,79 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="container">
+        <div class="row mbot-30 g-5">
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div>
+              <img src="icons/AutoNest Logo.svg" alt="logo autonest footer" class="logo-footer mbot-30" />
+              <p class="text-contact-footer mbot-10">Telefon: <span>0749 406 638</span></p>
+              <p class="text-contact-footer mbot-10">Email: <span>0749 406 638</span></p>
+              <p class="text-contact-footer mbot-10">Adresa: <span>0749 406 638</span></p>
+              <p class="text-contact-footer">Program: <span>L - V : 09:00 - 18:00</span></p>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div>
+              <p class="footer-title mbot-20">Navigare</p>
+              <ul class="nav-footer-list">
+                <li>
+                  <a href="#home" class="nav-footer-link">Acasă</a>
+                </li>
+                <li>
+                  <a href="#section-about" class="nav-footer-link">Despre</a>
+                </li>
+                <li>
+                  <a href="#section-services" class="nav-footer-link">Servicii</a>
+                </li>
+                <li>
+                  <a href="#section-reviews" class="nav-footer-link">Testimoniale</a>
+                </li>
+                <li>
+                  <a href="#section-faq" class="nav-footer-link">Întrebări</a>
+                </li>
+                <li>
+                  <a href="#section-contact" class="nav-footer-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div>
+              <p class="footer-title mbot-20">Link-uri utile</p>
+              <ul class="nav-footer-list">
+                <li>
+                  <a href="https://google.ro" class="nav-footer-link">Google</a>
+                </li>
+                <li>
+                  <a href="https://rarom.ro" class="nav-footer-link">RAROM</a>
+                </li>
+                <li>
+                  <a href="https://anpc.ro" class="nav-footer-link">ANPC</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 d-flex justify-content-center">
+            <div>
+              <p class="footer-title mbot-20">Documente legale</p>
+              <ul class="nav-footer-list">
+                <li>
+                  <a href="#" class="nav-footer-link">Termeni și condiții</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-footer-link">Politica de confidențialitate</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-footer-link">Cookies</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <blockquote>Copyright 2025 - AutoNEST - Toate drepturile rezervate.</blockquote>
+      </div>
+    </footer>
 
     <script src="js/formjs.js"></script>
     <script src="js/interObs.js"></script>

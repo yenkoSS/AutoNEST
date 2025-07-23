@@ -19,9 +19,30 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 55%;
   user-select: none;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
 
 section {
@@ -36,6 +57,7 @@ h1 {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 6rem;
   color: white;
+  animation: showH1 800ms;
 }
 
 h1 .span-1 {
@@ -62,6 +84,32 @@ h1 .span-3 {
   align-items: center;
 }
 
+h1 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 4rem;
+  color: white;
+  animation: showH1 600ms;
+}
+
+h1 .span-1 {
+  color: var(--color-red);
+}
+
+h1 .span-2 {
+  font-size: 3rem;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h1 .span-2 {
+    font-size: 4rem;
+  }
+}
+
 h1 .span-3::before {
   display: block;
   content: "";
@@ -70,6 +118,18 @@ h1 .span-3::before {
   background-color: var(--color-red);
   margin-right: 10px;
   border-radius: 50%;
+}
+
+@keyframes showH1 {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 h2 {
@@ -136,8 +196,60 @@ header {
 
 .nav-header {
   box-shadow: 2px 2px 10px rgb(116, 116, 116);
-  padding: 2rem 10rem;
+  padding: 2rem 2rem;
   background-color: white;
+  animation: showHeaderNav 400ms;
+}
+
+.nav-header-list-sm {
+  background-color: var(--color-red);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-header-link-sm {
+  text-transform: uppercase;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.icon-close {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-header {
+    padding: 2rem 10rem;
+  }
+}
+
+@keyframes showHeaderNav {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-fixed {
@@ -148,23 +260,62 @@ header {
   width: 100%;
   top: 0;
   display: none !important;
+  animation: showNavFixed 1000ms;
+}
+
+@keyframes showNavFixed {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .icon-logo-header {
-  width: 20rem;
+  width: 17rem;
   height: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .icon-logo-header {
+    width: 20rem;
+  }
 }
 
 .nav-header-list-lg {
   list-style-type: none;
-  display: flex;
+  display: none;
   gap: 3rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-header-list-lg {
+    display: flex;
+  }
 }
 
 .fixed-nav {
   position: fixed;
   width: 100%;
   z-index: 2;
+  animation: showNavFixed 500ms;
+  top: 0;
+}
+
+@keyframes showNavFixed {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .nav-header-link-lg {
@@ -213,6 +364,13 @@ header {
   font-weight: 700;
   transition: 100ms ease-out;
   border-radius: 3px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .btn-navbar {
+    display: block;
+  }
 }
 
 .btn-navbar:hover {
@@ -243,8 +401,18 @@ header {
 .social-box-nav {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  background-color: var(--color-red);
+  gap: 1.6rem;
+  padding: 1rem 3rem;
 }
+
+@media screen and (min-width: 768px) {
+  .social-box-nav {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
 .icon-social-nav {
   width: 20px;
   height: auto;
@@ -268,6 +436,7 @@ header {
   width: fit-content;
   transition: 100ms ease-out;
   border-radius: 3px;
+  animation: showBtnHero 700ms;
 }
 
 .btn-hero-white {
@@ -283,6 +452,16 @@ header {
   transition: 100ms ease-out;
   border-radius: 3px;
   animation: pulse-white 2s infinite;
+}
+
+@keyframes showBtnHero {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .btn-hero:hover {
@@ -317,18 +496,28 @@ header {
   font-weight: 700;
 }
 
+.icon-menu {
+  width: 3rem;
+  height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-menu {
+    display: none;
+  }
+}
+
 /* ----- HEADER END ----- */
 
 /* ----- SECTION WHY US ----- */
 
 .section-whyus {
-  padding: 3rem 0;
+  padding: 3rem 0 6rem 0;
 }
 
 .box-why-us {
   background-color: var(--color-red);
-  width: 70%;
-  margin-top: -150px;
+  width: 80%;
   z-index: 1;
   position: relative;
   padding: 3rem 5rem 6rem 5rem;
@@ -336,18 +525,37 @@ header {
   border-radius: 15px;
 }
 
+.box-why-us {
+  background-color: var(--color-red);
+  width: 90%;
+
+  z-index: 1;
+  position: relative;
+  padding: 3rem 5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.363);
+  border-radius: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .box-why-us {
+    width: 85%;
+  }
+}
+
 .card-whyus {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   position: relative;
   transition: 50ms ease-out;
 }
 
-.card-whyus:hover .icon-card-whyus {
-  transform: scale(1.05);
+@media screen and (min-width: 1200px) {
+  .card-whyus {
+    width: 90%;
+  }
 }
 
 .after-separator::after {
@@ -358,6 +566,22 @@ header {
   content: "";
   background-color: white;
   right: -14px;
+}
+
+.after-separator::after {
+  position: absolute;
+  display: none;
+  width: 1px;
+  height: 80px;
+  content: "";
+  background-color: white;
+  right: -14px;
+}
+
+@media screen and (min-width: 1200px) {
+  .after-separator::after {
+    display: block;
+  }
 }
 
 .box-title {
@@ -371,8 +595,14 @@ header {
 }
 
 .icon-card-whyus {
-  width: 7rem;
+  width: 5rem;
   height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-card-whyus {
+    width: 7rem;
+  }
 }
 
 .text-title-whyus {
@@ -430,7 +660,13 @@ header {
 /* ----- SECTION ABOUT ----- */
 
 .section-aboutus {
-  padding: 7rem 0;
+  padding: 2rem 0 4rem 0;
+}
+
+@media screen and (min-weight: 992px) {
+  .section-aboutus {
+    padding: 7rem 0;
+  }
 }
 
 .box-experience {
@@ -497,6 +733,7 @@ header {
   display: block;
   content: "";
   width: 12px;
+  min-width: 12px;
   height: 12px;
   background-color: var(--color-red);
   border-radius: 50%;
@@ -514,6 +751,10 @@ header {
   transition: 100ms ease-out;
   border-radius: 3px;
   width: fit-content;
+}
+
+.card-obd {
+  width: 80%;
 }
 
 /* ----- SECTION SERVICES END ----- */
@@ -558,9 +799,15 @@ header {
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .box-schedule-dark {
+    display: flex;
+  }
 }
 
 /* ----- SECTION SCHEDULE END ----- */
@@ -623,13 +870,13 @@ header {
 }
 
 .text-faq-question {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   font-family: "Bai Jamjuree", sans-serif;
   color: white;
 }
 .text-faq-answer {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   font-family: "Bai Jamjuree", sans-serif;
   color: var(--color-dark-grey);
@@ -818,6 +1065,62 @@ iframe {
 /*----- FORM CSS END ----- */
 
 /* ----- SECTION CONTACT END ----- */
+
+/* ----- FOOTER ----- */
+
+footer {
+  padding: 3rem 0;
+  background-color: var(--color-dark-grey);
+}
+
+.logo-footer {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  width: 25rem;
+  height: auto;
+}
+
+.footer-title {
+  color: var(--color-red);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-footer-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-footer-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.text-contact-footer {
+  color: var(--color-red);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.text-contact-footer span {
+  color: white;
+}
+
+blockquote {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* ----- FOOTER END ----- */
 
 /* ----- LEGAL DOCUMENTS ----- */
 

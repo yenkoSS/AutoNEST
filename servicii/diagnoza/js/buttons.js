@@ -26,6 +26,11 @@ document.querySelectorAll(".btn-hero-white").forEach((btn) => {
   });
 });
 
+document.querySelector(".btn-schedule").addEventListener("click", () => {
+  const sectionContact = document.querySelector("#section-contact");
+  sectionContact.scrollIntoView({ behavior: "smooth" });
+});
+
 document.querySelectorAll(".btn-services").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();

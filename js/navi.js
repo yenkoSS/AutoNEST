@@ -8,7 +8,6 @@ document.querySelector(".logo-navbar").addEventListener("click", (e) => {
 
 /* NAV HEADER LINK LG */
 
-/*
 document.querySelectorAll(".nav-header-link-lg").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -16,7 +15,7 @@ document.querySelectorAll(".nav-header-link-lg").forEach((link) => {
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   });
 });
-*/
+
 /* NAV FIXED */
 
 window.addEventListener("scroll", () => {
@@ -30,7 +29,7 @@ window.addEventListener("scroll", () => {
 
 /* NAV SM */
 
-document.querySelector(".icon-menu-nav-header").addEventListener("click", () => {
+document.querySelector(".icon-menu").addEventListener("click", () => {
   document.querySelector(".nav-header-list-sm").style.display = "flex";
 });
 

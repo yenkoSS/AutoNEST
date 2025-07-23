@@ -33,6 +33,13 @@ document.querySelectorAll(".btn-services").forEach((btn) => {
   });
 });
 
+document.querySelectorAll(".btn-schedule").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const sectionContact = document.querySelector("#section-contact");
+    sectionContact.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
 /* INTERSECTION OBSERVERS */
 
 /* OLD WAY OBSERVERS 

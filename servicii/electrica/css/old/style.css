@@ -19,30 +19,9 @@
 }
 
 html {
-  font-size: 55%;
+  font-size: 62.5%;
   user-select: none;
   font-family: "Open Sans", sans-serif;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-.img-fluid {
-  width: 100%;
-  height: auto;
 }
 
 section {
@@ -57,7 +36,7 @@ h1 {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 6rem;
   color: white;
-  animation: showH1 800ms;
+  animation: showH1 1000ms;
 }
 
 h1 .span-1 {
@@ -82,32 +61,6 @@ h1 .span-3 {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-}
-
-h1 {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-size: 4rem;
-  color: white;
-  animation: showH1 600ms;
-}
-
-h1 .span-1 {
-  color: var(--color-red);
-}
-
-h1 .span-2 {
-  font-size: 3rem;
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 6rem;
-  }
-
-  h1 .span-2 {
-    font-size: 4rem;
-  }
 }
 
 h1 .span-3::before {
@@ -196,48 +149,9 @@ header {
 
 .nav-header {
   box-shadow: 2px 2px 10px rgb(116, 116, 116);
-  padding: 2rem 2rem;
+  padding: 2rem 10rem;
   background-color: white;
-  animation: showHeaderNav 400ms;
-}
-
-.nav-header-list-sm {
-  background-color: var(--color-red);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  list-style-type: none;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.nav-header-link-sm {
-  text-transform: uppercase;
-  font-family: "Bai Jamjuree", sans-serif;
-  font-size: 45px;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-}
-
-.icon-close {
-  position: absolute;
-  right: 35px;
-  top: 35px;
-  width: 50px;
-  height: auto;
-}
-
-@media screen and (min-width: 992px) {
-  .nav-header {
-    padding: 2rem 10rem;
-  }
+  animation: showHeaderNav 500ms;
 }
 
 @keyframes showHeaderNav {
@@ -260,42 +174,17 @@ header {
   width: 100%;
   top: 0;
   display: none !important;
-  animation: showNavFixed 1000ms;
-}
-
-@keyframes showNavFixed {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .icon-logo-header {
-  width: 17rem;
+  width: 20rem;
   height: auto;
-}
-
-@media screen and (min-width: 992px) {
-  .icon-logo-header {
-    width: 20rem;
-  }
 }
 
 .nav-header-list-lg {
   list-style-type: none;
-  display: none;
+  display: flex;
   gap: 3rem;
-}
-
-@media screen and (min-width: 1200px) {
-  .nav-header-list-lg {
-    display: flex;
-  }
 }
 
 .fixed-nav {
@@ -364,13 +253,6 @@ header {
   font-weight: 700;
   transition: 100ms ease-out;
   border-radius: 3px;
-  display: none;
-}
-
-@media screen and (min-width: 1200px) {
-  .btn-navbar {
-    display: block;
-  }
 }
 
 .btn-navbar:hover {
@@ -400,19 +282,10 @@ header {
 
 .social-box-nav {
   display: flex;
-  flex-direction: column;
   background-color: var(--color-red);
-  gap: 1.6rem;
+  gap: 1rem;
   padding: 1rem 3rem;
 }
-
-@media screen and (min-width: 768px) {
-  .social-box-nav {
-    flex-direction: row;
-    gap: 3rem;
-  }
-}
-
 .icon-social-nav {
   width: 20px;
   height: auto;
@@ -436,7 +309,17 @@ header {
   width: fit-content;
   transition: 100ms ease-out;
   border-radius: 3px;
-  animation: showBtnHero 700ms;
+  animation: showBtnHero 1000ms;
+}
+
+@keyframes showBtnHero {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .btn-hero-white {
@@ -452,16 +335,6 @@ header {
   transition: 100ms ease-out;
   border-radius: 3px;
   animation: pulse-white 2s infinite;
-}
-
-@keyframes showBtnHero {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 .btn-hero:hover {
@@ -496,17 +369,6 @@ header {
   font-weight: 700;
 }
 
-.icon-menu {
-  width: 3rem;
-  height: auto;
-}
-
-@media screen and (min-width: 1200px) {
-  .icon-menu {
-    display: none;
-  }
-}
-
 /* ----- HEADER END ----- */
 
 /* ----- SECTION WHY US ----- */
@@ -525,37 +387,18 @@ header {
   border-radius: 15px;
 }
 
-.box-why-us {
-  background-color: var(--color-red);
-  width: 90%;
-
-  z-index: 1;
-  position: relative;
-  padding: 3rem 5rem;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.363);
-  border-radius: 15px;
-}
-
-@media screen and (min-width: 1200px) {
-  .box-why-us {
-    width: 85%;
-  }
-}
-
 .card-whyus {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   position: relative;
   transition: 50ms ease-out;
 }
 
-@media screen and (min-width: 1200px) {
-  .card-whyus {
-    width: 90%;
-  }
+.card-whyus:hover .icon-card-whyus {
+  transform: scale(1.05);
 }
 
 .after-separator::after {
@@ -566,22 +409,6 @@ header {
   content: "";
   background-color: white;
   right: -14px;
-}
-
-.after-separator::after {
-  position: absolute;
-  display: none;
-  width: 1px;
-  height: 80px;
-  content: "";
-  background-color: white;
-  right: -14px;
-}
-
-@media screen and (min-width: 1200px) {
-  .after-separator::after {
-    display: block;
-  }
 }
 
 .box-title {
@@ -595,14 +422,8 @@ header {
 }
 
 .icon-card-whyus {
-  width: 5rem;
+  width: 7rem;
   height: auto;
-}
-
-@media screen and (min-width: 1200px) {
-  .icon-card-whyus {
-    width: 7rem;
-  }
 }
 
 .text-title-whyus {
@@ -660,13 +481,7 @@ header {
 /* ----- SECTION ABOUT ----- */
 
 .section-aboutus {
-  padding: 2rem 0 4rem 0;
-}
-
-@media screen and (min-weight: 992px) {
-  .section-aboutus {
-    padding: 7rem 0;
-  }
+  padding: 7rem 0;
 }
 
 .box-experience {
@@ -733,7 +548,6 @@ header {
   display: block;
   content: "";
   width: 12px;
-  min-width: 12px;
   height: 12px;
   background-color: var(--color-red);
   border-radius: 50%;
@@ -751,10 +565,6 @@ header {
   transition: 100ms ease-out;
   border-radius: 3px;
   width: fit-content;
-}
-
-.card-obd {
-  width: 80%;
 }
 
 /* ----- SECTION SERVICES END ----- */
@@ -799,15 +609,9 @@ header {
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media screen and (min-width: 1200px) {
-  .box-schedule-dark {
-    display: flex;
-  }
 }
 
 /* ----- SECTION SCHEDULE END ----- */
